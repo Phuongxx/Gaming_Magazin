@@ -1,0 +1,109 @@
+@use "variables" as color;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(https://www.behance.net/gallery/61228185/Lovers-at-dusk-Animated-pixel-art/modules/359660971);
+}
+.loop-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: color.$header-background;
+
+  &__checkbox {
+    display: none;
+  }
+  &__menu {
+    cursor: pointer;
+    font-family: PixelFont;
+    font-size: 1rem;
+    color: color.$link-color;
+    display: none;
+  }
+  &__nav {
+    border-radius: 5px;
+    display: flex;
+    gap: 20rem;
+  }
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  &__nav-item {
+    float: left;
+    padding: 10px;
+    text-decoration: none;
+  }
+  &__nav-link {
+    text-decoration: none;
+    font-family: PixelFont;
+    font-size: 0.7rem;
+    color: color.$link-color;
+  }
+  &__nav-link:hover {
+    color: color.$nav_link-hover;
+  }
+  &__search-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  &__search,
+  &__search-button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.11);
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 870px) {
+  .header {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    &__nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+    }
+    &__nav-list {
+      flex-direction: column;
+      gap: 0;
+      display: block;
+      background-color: blue;
+      width: 100%;
+    }
+    &__search-form {
+      display: block;
+    }
+    &__nav-item {
+      width: 100%;
+    }
+    &__menu {
+      display: initial;
+    }
+  }
+
+  .header__nav:hover {
+    display: block;
+  }
+}
