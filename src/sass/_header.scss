@@ -47,7 +47,6 @@ body {
   }
   &__nav-item {
     float: left;
-    padding: 10px;
     text-decoration: none;
   }
   &__nav-link {
@@ -78,32 +77,54 @@ body {
     height: 5vh;
     display: flex;
     align-items: center;
+    border-bottom: solid 1px black;
     &__nav {
       position: absolute;
       top: 100%;
       left: 0;
       right: 0;
+      width: 100%;
       display: none;
+      z-index: 100;
     }
     &__nav-list {
       flex-direction: column;
-      gap: 0;
       display: block;
-      background-color: blue;
+      height: 50vh;
       width: 100%;
+      background-color: color.$header-background;
     }
-    &__search-form {
+
+    &__nav-link {
       display: block;
+      width: 100%;
+      font-size: 1.2rem;
+      padding: 30px;
+      background-color: green;
     }
+
     &__nav-item {
       width: 100%;
+      border: solid 1px black;
+    }
+    &__nav-item:hover {
+      background-color: rgba(85, 85, 85, 0.11);
+      border-color: color.$nav_link-hover;
     }
     &__menu {
-      display: initial;
+      display: block;
+      cursor: pointer;
+      font-family: PixelFont;
+      font-size: 1rem;
+      color: color.$link-color;
+      padding: 0.5rem;
+    }
+    &header__search-form {
+      background-color: blue;
     }
   }
 
-  .header__nav:hover {
+  .header:hover .header__nav {
     display: block;
   }
 }
