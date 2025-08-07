@@ -24,10 +24,8 @@ body {
   left: 0;
   right: 0;
   display: flex;
+  height: 5vh;
   background-color: rgba(0, 0, 0, 0.662745098);
-}
-.header__checkbox {
-  display: none;
 }
 .header__menu {
   cursor: pointer;
@@ -40,12 +38,14 @@ body {
   border-radius: 5px;
   display: flex;
   gap: 20rem;
+  margin-left: 1rem;
 }
 .header__nav-list {
   list-style: none;
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  align-items: center;
 }
 .header__nav-item {
   float: left;
@@ -68,7 +68,6 @@ body {
 .header__search, .header__search-button {
   border: none;
   background-color: rgba(255, 255, 255, 0.11);
-  padding: 5px;
   border-radius: 5px;
 }
 
@@ -99,7 +98,7 @@ body {
     display: block;
     width: 100%;
     font-size: 1.2rem;
-    padding: 30px;
+    padding: 2rem;
     background-color: green;
   }
   .header__nav-item {
@@ -118,8 +117,21 @@ body {
     color: #17ff17;
     padding: 0.5rem;
   }
-  .headerheader__search-form {
-    background-color: blue;
+  .header__search-form {
+    background-color: transparent;
+  }
+  .header__search {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #17ff17;
+  }
+  .header__search-button {
+    display: none;
+  }
+  .header__nav-item--search {
+    margin-top: auto;
+    border-top: solid 1px rgba(255, 255, 255, 0.2);
   }
   .header:hover .header__nav {
     display: block;
