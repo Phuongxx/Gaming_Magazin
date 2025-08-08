@@ -15,7 +15,17 @@ body {
   height: 100vh;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.5);
+  filter: brightness(0.5) saturate(250%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(241, 55, 241, 0.116);
+  filter: saturate(100%);
 }
 
 .header {
@@ -31,7 +41,7 @@ body {
   cursor: pointer;
   font-family: PixelFont;
   font-size: 1rem;
-  color: #17ff17;
+  color: #00f800;
   display: none;
 }
 .header__nav {
@@ -39,6 +49,8 @@ body {
   display: flex;
   gap: 20rem;
   margin-left: 1rem;
+  margin-right: 1rem;
+  width: 100%;
 }
 .header__nav-list {
   list-style: none;
@@ -46,6 +58,8 @@ body {
   flex-direction: row;
   gap: 2rem;
   align-items: center;
+  display: flex;
+  width: 100%;
 }
 .header__nav-item {
   float: left;
@@ -54,11 +68,11 @@ body {
 .header__nav-link {
   text-decoration: none;
   font-family: PixelFont;
-  font-size: 0.7rem;
-  color: #17ff17;
+  font-size: 1rem;
+  color: #00f800;
 }
 .header__nav-link:hover {
-  color: #651e94;
+  color: #8331b9;
 }
 .header__search-form {
   display: flex;
@@ -68,7 +82,13 @@ body {
 .header__search, .header__search-button {
   border: none;
   background-color: rgba(255, 255, 255, 0.11);
+  color: rgba(255, 251, 226, 0.8352941176);
   border-radius: 5px;
+  height: 1.5rem;
+}
+
+.header__nav-item--search {
+  margin-left: auto;
 }
 
 @media (max-width: 870px) {
@@ -81,11 +101,11 @@ body {
   .header__nav {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -10;
     right: 0;
-    width: 100%;
     display: none;
     z-index: 100;
+    margin-right: 0;
   }
   .header__nav-list {
     flex-direction: column;
@@ -96,7 +116,6 @@ body {
   }
   .header__nav-link {
     display: block;
-    width: 100%;
     font-size: 1.2rem;
     padding: 2rem;
     background-color: green;
@@ -107,14 +126,14 @@ body {
   }
   .header__nav-item:hover {
     background-color: rgba(85, 85, 85, 0.11);
-    border-color: #651e94;
+    border-color: #8331b9;
   }
   .header__menu {
     display: block;
     cursor: pointer;
     font-family: PixelFont;
     font-size: 1rem;
-    color: #17ff17;
+    color: #00f800;
     padding: 0.5rem;
   }
   .header__search-form {
@@ -122,9 +141,8 @@ body {
   }
   .header__search {
     width: 100%;
-    padding: 1rem;
+    padding: 1.8rem;
     font-size: 1rem;
-    color: #17ff17;
   }
   .header__search-button {
     display: none;
@@ -137,9 +155,101 @@ body {
     display: block;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.main__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.form {
+  height: calc(100vh - 2rem);
+  border: solid 1px #17ff17;
+  padding: 1rem;
+  max-width: 600px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.form__fieldset {
+  border: none;
+}
+.form__title {
+  font-family: PixelFont, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  margin-bottom: 2rem;
+  margin-left: 1px;
+}
+.form__title:hover {
+  color: #8331b9;
+  cursor: default;
+}
+.form__welcome-text {
+  font-family: PixelFont, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0px;
+  border-bottom: solid 1px #17ff17;
+  width: 100%;
+}
+.form__title, .form__welcome-text {
+  color: #00f800;
+}
+.form__group {
+  margin-top: 2rem;
+}
+.form .form__group:focus-within .form__label {
+  color: #8331b9;
+}
+.form__label {
+  font-family: PixelFont, sans-serif;
+  color: #00f800;
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.form__input {
+  background-color: rgba(34, 34, 34, 0.503);
+  border: 1px solid #17ff17;
+  display: block;
+  border-radius: 5px;
+  width: calc(100% - 5rem);
+  padding: 1rem 1.5rem;
+  font-family: PixelFont, sans-serif;
+  color: #d1d1d1;
+  cursor: pointer;
+}
+.form__input:focus {
+  outline: none;
+  border-color: #8331b9;
+}
+
+@media (min-width: 650px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form {
+    height: 70vh;
+  }
+}
 @font-face {
   font-family: PixelFont;
-  src: url(../fonts/PressStart2P-Regular.ttf);
+  src: url("../fonts/PressStart2P-Regular.ttf");
 }
 
 /*# sourceMappingURL=output.css.map */
