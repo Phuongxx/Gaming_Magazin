@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <main class="main">
+      <video
+        class="main__video"
+        src="../video/PixelBiker.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="video/PixelBiker.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+      <form action="" class="form">
+        <h1 class="form__title">New Game</h1>
+        <p class="form__welcome-text">Welcomee to Cybercity</p>
+        <fieldset class="form__fieldset">
+          <div class="form__group">
+            <label for="username" class="form__label">Enter your Name:</label>
+            <input type="text" class="form__input" id="username" />
+          </div>
+          <div class="form__group">
+            <label for="username" class="form__label"
+              >Enter your Password:</label
+            >
+            <input type="password" class="form__input" id="passowrd" />
+          </div>
+          <div class="form__group">
+            <label for="rePassword" class="form__label"
+              >Re-enter your password:</label
+            >
+            <input type="password" class="form__input" id="rePassword" />
+          </div>
+          <div class="form__group">
+            <label for="email" class="form__label">Enter your Email:</label>
+            <input
+              type="email"
+              class="form__input"
+              id="email"
+              placeholder="gerade@example.com"
+            />
+          </div>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
