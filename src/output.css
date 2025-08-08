@@ -183,6 +183,7 @@ body {
   max-width: 600px;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.8);
+  display: block;
 }
 .form__fieldset {
   border: none;
@@ -227,7 +228,7 @@ body {
   display: block;
   border-radius: 5px;
   width: calc(100% - 5rem);
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   font-family: PixelFont, sans-serif;
   color: #d1d1d1;
   cursor: pointer;
@@ -235,6 +236,37 @@ body {
 .form__input:focus {
   outline: none;
   border-color: #8331b9;
+}
+.form__signup-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3rem;
+  border: 1px solid #17ff17;
+  padding: 1.5rem;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  color: #00f800;
+  background-color: inherit;
+  outline: none;
+  font-family: PixelFont, sans-serif;
+}
+.form__signup-button:hover {
+  color: #8331b9;
+  cursor: pointer;
+  border: solid 1px #8331b9;
+}
+.form__login-text {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: PixelFont, sans-serif;
+  color: #d1d1d1;
+}
+.form__login-link {
+  color: #00f800;
+}
+.form__login-link:hover {
+  color: #8331b9;
 }
 
 @media (min-width: 650px) {

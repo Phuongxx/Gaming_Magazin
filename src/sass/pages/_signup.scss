@@ -31,6 +31,7 @@ body {
   max-width: 600px;
   z-index: 2;
   background-color: color.$signup-background-color;
+  display: block;
   &__fieldset {
     border: none;
   }
@@ -79,7 +80,7 @@ body {
     display: block;
     border-radius: 5px;
     width: calc(100% - 5rem);
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     font-family: PixelFont, sans-serif;
     color: color.$font-color;
     cursor: pointer;
@@ -87,6 +88,39 @@ body {
   &__input:focus {
     outline: none;
     border-color: color.$nav-link-hover;
+  }
+
+  &__signup-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border: 1px solid color.$border-color;
+    padding: 1.5rem;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    color: color.$link-color;
+    background-color: inherit;
+    outline: none;
+    font-family: PixelFont, sans-serif;
+  }
+  &__signup-button:hover {
+    color: color.$nav_link-hover;
+    cursor: pointer;
+    border: solid 1px color.$nav_link-hover;
+  }
+
+  &__login-text {
+    text-align: center;
+    margin-top: 2rem;
+    font-family: PixelFont, sans-serif;
+    color: color.$font-color;
+  }
+  &__login-link {
+    color: color.$link-color;
+  }
+  &__login-link:hover {
+    color: color.$nav_link-hover;
   }
 }
 
