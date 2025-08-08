@@ -5,6 +5,24 @@
   padding: 0;
 }
 
+.form__login-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border: 1px solid color.$border-color;
+  padding: 1.5rem;
+  border-radius: 5px;
+  font-size: inherit;
+  color: color.$link-color;
+  background-color: inherit;
+  outline: none;
+  font-family: PixelFont, sans-serif;
+  &:hover {
+    color: color.$nav_link-hover;
+    border: solid 1px color.$nav_link-hover;
+  }
+}
+
 @media (min-width: 768px) {
   .form--login {
     height: 60vh;
