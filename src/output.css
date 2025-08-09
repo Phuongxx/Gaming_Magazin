@@ -321,17 +321,21 @@ body {
   align-items: center;
 }
 .hero__title {
+  position: absolute;
   font-family: Arial, Helvetica, sans-serif;
   color: #00f800;
   opacity: 0;
-  animation: fadeIn 2s forwards;
+  transform: translateY(-500px);
+  animation: slideInTop 2.5s forwards;
+  top: 80%;
 }
-@keyframes fadeIn {
+@keyframes slideInTop {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 .hero__video {
@@ -354,6 +358,11 @@ body {
   filter: saturate(100%);
 }
 
+@media (min-width: 670px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+}
 @font-face {
   font-family: PixelFont;
   src: url("../fonts/PressStart2P-Regular.ttf");
