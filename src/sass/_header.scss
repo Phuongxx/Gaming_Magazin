@@ -6,25 +6,7 @@
 body {
   background: url(https://www.behance.net/gallery/61228185/Lovers-at-dusk-Animated-pixel-art/modules/359660971);
 }
-.loop-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  filter: brightness(0.5) saturate(250%);
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(241, 55, 241, 0.116);
-  filter: saturate(100%);
-}
+
 .header {
   position: fixed;
   top: 0;
