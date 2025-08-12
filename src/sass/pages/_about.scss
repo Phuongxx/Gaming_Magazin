@@ -1,0 +1,143 @@
+@use "../variables" as color;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.about {
+  height: 140vh;
+  background-color: color.$header-background;
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  &__me {
+    margin: 2rem;
+  }
+  &__skills {
+    margin: 2rem;
+  }
+
+  &__role {
+  }
+  &__heading {
+    font-family: PixelFont, sans-serif;
+    margin-bottom: 1rem;
+    color: color.$link-color;
+    letter-spacing: 0.1rem;
+  }
+  &__text {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1rem;
+  }
+  &__expertise {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__expertise-item {
+    margin-top: 2rem;
+  }
+
+  &__heading--frontend,
+  &__text,
+  &__heading--backend,
+  &__skill {
+    color: color.$text-color;
+  }
+
+  &__skill-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  &__skill {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &__cta {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__button {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(79, 79, 79);
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+  }
+
+  &__button--projects {
+    background-color: color.$link-color;
+  }
+}
+
+@media (min-width: (600px)) {
+  .about {
+    height: 120vh;
+    &__cta {
+      flex-direction: row;
+    }
+
+    &__button {
+      width: 20%;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .about {
+    height: 80vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    display: grid;
+    gap: 2rem;
+
+    &__me {
+      grid-column: 1;
+      grid-row: 1;
+      max-width: 500px;
+      line-height: 1.4rem;
+    }
+
+    &__skills {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    &__cta {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 2rem;
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: left;
+      gap: 1rem;
+    }
+    &__button {
+      width: 30%;
+    }
+  }
+}
