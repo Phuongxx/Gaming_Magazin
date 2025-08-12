@@ -1,7 +1,7 @@
 @use "variables" as color;
 .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,10 +9,12 @@
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
     color: color.$link-color;
+    font-family: PixelFont;
     opacity: 0;
-    transform: translateY(-500px);
+    transform: translateY(-300px);
     animation: slideInTop 2.5s forwards;
-    top: 80%;
+    top: 60%;
+    font-size: 1rem;
   }
 
   @keyframes slideInTop {
